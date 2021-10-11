@@ -1,6 +1,9 @@
 <template>
   <div id="app">
-    <p>Я буду слать тебе поздравления в консоль каждые 5 секунд. Ничто не сможет меня остановить!</p>
+    <p>
+      Я буду слать тебе поздравления в консоль каждые 5 секунд. Ничто не сможет
+      меня остановить!
+    </p>
     <p>С любовью, твоя</p>
     <p>
       <strong>Ирина Аллегрова</strong>
@@ -11,10 +14,12 @@
 
 <script>
 const arr = [
-  "Любви до головокружения!",
-  "Всех желаний исполнения!",
+  "Успеха, радости, везения!",
+  "Любых желаний исполнения!",
   "Миллион ночей и дней!",
-  "Самых преданных друзей!"
+  "Любви до головокружения!",
+  "Чумового настроения!",
+  "Самых преданных друзей!",
 ];
 
 function getRandomInt(min, max) {
@@ -27,17 +32,18 @@ export default {
   name: "App",
   data() {
     return {
-      message: "С Днём Рождения!"
+      message: "С Днём Рождения!",
     };
   },
   beforeUpdate() {
-    console.log(`С Днём Рождения! ${this.message}`);
+    console.log(this.message);
   },
   created() {
+    console.log(this.message);
     setInterval(() => {
-      this.message = arr[getRandomInt(0, 4)];
+      this.message = arr[getRandomInt(0, arr.length - 1)];
     }, 5000);
-  }
+  },
 };
 </script>
 
