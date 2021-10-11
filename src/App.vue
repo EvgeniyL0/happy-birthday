@@ -8,6 +8,7 @@
     <p>
       <strong>Ирина Аллегрова</strong>
     </p>
+    <img class="image" src="../assets/images/ira.jpg" alt="">
     <p class="message">{{ message }}</p>
   </div>
 </template>
@@ -55,6 +56,11 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+
+.image {
+  width: 200px;
+  object-fit: cover;
 }
 
 .message {
